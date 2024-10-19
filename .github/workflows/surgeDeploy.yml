@@ -20,5 +20,5 @@ jobs:
     - name: Install Surge
       run: npm install -g surge
     - name: Run Surge
-      run: surge ./build --token ${{secrets.SURGE_TOKEN}}
+      run: surge ./build zakriyafarid.surge.sh --token ${{secrets.SURGE_TOKEN}}
     
