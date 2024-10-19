@@ -13,7 +13,7 @@ jobs:
       with:
         node-version: 12
     - name: install Yarn
-      run: yarn install
+      run: npm install -g yarn
     - name: Verify Yarn Installation
       run: yarn -v
     - name: Yarn Build
