@@ -1,0 +1,24 @@
+name: React app Deploy on Surge
+
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: install NodeJS
+      with:
+        node-version: 12
+    - name: install Yarn
+      run: npm install -g yarn
+    - name: Verify Yarn Installation
+      run: yarn -v
+    - name: Yarn Build
+      run: yarn build
+    - name: Install Surge
+      run: npm install -g surge
+    - name: Run Surge
+      run: surge ./build --token ${{secrets.SURGE_TOKEN}}
+    
