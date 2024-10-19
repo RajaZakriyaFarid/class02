@@ -14,6 +14,8 @@ jobs:
       run: npm install -g yarn
     - name: Verify Yarn Installation
       run: yarn -v
+    - name: Install Dependencies
+      run: yarn install
     - name: Yarn Build
       run: yarn build
     - name: Install Surge
