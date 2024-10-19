@@ -10,8 +10,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: install NodeJS
       uses: actions/setup-node@v3
-      with:
-        node-version: 12
     - name: install Yarn
       run: npm install -g yarn
     - name: Verify Yarn Installation
